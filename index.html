@@ -32,7 +32,9 @@
           >
           <ul class="all-link-list list">
             <li class="">
-              <a class="link-list hover-band link" href="./index.html">Studio</a>
+              <a class="link-list hover-band link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="">
               <a class="link-list link" href="./portfolio.html">Portfolio</a>
@@ -62,7 +64,9 @@
       <!-- HERO -->
       <section class="hero-section">
         <h1 class="site-title">Effective Solutions for Your Business</h1>
-        <button class="button-studio" data-modal-open type="button">Order Service</button>
+        <button class="button-studio" data-modal-open type="button">
+          Order Service
+        </button>
       </section>
       <!-- First-section -->
       <section class="section first-section">
@@ -423,13 +427,59 @@
 
     <div class="backdrop" data-modal>
       <div class="modal">
-        <button type="button" data-modal-close class="close-modal">x</button>
+        <button type="button" data-modal-close class="close-modal">
+          <svg class="icon-close-modal">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
         <form class="modal-form">
-          <input type="text" class="modal-input" placeholder="" name="user-name" required>
-          <input type="text" class="modal-input" placeholder="" name="user-phone" required>
-          <input type="text" class="modal-input" placeholder="" name="user-email" required>
-          <input type="text" class="modal-input comment" placeholder="Text input " name="user-comment">
+          <label
+            ><span class="input-name">Name</span>
+            <input
+              type="text"
+              class="modal-input"
+              placeholder=""
+              name="user-name"
+              required
+              minlength="2"
+            />
+          </label>
+
+          <label
+            ><span class="input-name">Phone</span>
+            <input
+              type="tel"
+              class="modal-input"
+              placeholder="+380 (00) 000-00-00"
+              name="user-phone"
+              required
+              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+380 (00) 000-00-00"
+            />
+          </label>
+
+          <label
+            ><span class="input-name">Email</span>
+            <input
+              type="email"
+              class="modal-input"
+              placeholder=""
+              name="user-email"
+              required
+            />
+          </label>
+
+          <label
+            ><span class="input-name">Comment</span>
+            <input
+              type="text"
+              class="modal-input comment"
+              placeholder="Text input "
+              name="user-comment"
+            />
+          </label>
+
           <button type="submit" class="modal-button">Send</button>
         </form>
       </div>

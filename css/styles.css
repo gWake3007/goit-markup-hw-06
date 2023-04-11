@@ -684,10 +684,27 @@ section {
 .close-modal {
   display: block;
   margin-left: auto;
+  height: 24px;
+  width: 24px;
   border-radius: 50%;
   background: var(--accent);
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
+}
+
+.icon-close-modal{
+  height: 8px;
+  width: 8px;
+}
+
+.close-modal:focus,
+.close-modal:hover{
+  background: var(--pressed-state);
+}
+
+.close-modal:focus .icon-close-modal,
+.close-modal:hover .icon-close-modal{
+  fill:var(--white);
 }
 
 .is-hidden {
@@ -716,6 +733,7 @@ section {
   height: 40px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  outline: transparent;
   transition: var(--transition-duration);
   margin-bottom: 8px;
 }
@@ -735,9 +753,41 @@ section {
 }
 
 .modal-input:hover,
-.modal-input:focus{
+.modal-input:focus {
   border: 1px solid var(--primacy-brand);
 }
 
 .modal-button {
+  min-width: 169px;
+  height: 56px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: transparent;
+  background-color: var(--primacy-brand);
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  border: none;
+  transition: background-color var(--transition-duration);
+}
+
+.modal-button:hover,
+.modal-button:focus {
+  background-color: var(--pressed-state);
+}
+
+.input-name {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
 }
