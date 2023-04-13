@@ -418,14 +418,31 @@
             </li>
           </ul>
         </div>
+        <div class="footer-form">
+          <form name="subscribe" autocomplete="on" class="footer-subscribe">
+            <label class="footer-label">
+              <span class="subscribe-span">Subscribe</span>
+              <input
+                type="email"
+                class="input-footer"
+                name="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="subscribe-button" type="submit">
+              Subscribe
+              <svg class="footer-send-icon">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
     <!---------- MODAL WINDOW ---------->
 
-    <!-- <div class="backdrop is-hidden" data-modal> -->
-
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" data-modal-close class="close-modal">
           <svg class="icon-close-modal">
@@ -433,53 +450,58 @@
           </svg>
         </button>
         <p class="modal-text">Leave your contacts and we will call you back</p>
-        <form class="modal-form">
-          <label
-            ><span class="input-name">Name</span>
-            <input
-              type="text"
-              class="modal-input"
-              placeholder=""
-              name="user-name"
-              required
-              minlength="2"
-            />
-          </label>
-
-          <label
-            ><span class="input-name">Phone</span>
-            <input
-              type="tel"
-              class="modal-input"
-              placeholder="+380 (00) 000-00-00"
-              name="user-phone"
-              required
-              pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
-              title="+380 (00) 000-00-00"
-            />
-          </label>
-
-          <label
-            ><span class="input-name">Email</span>
-            <input
-              type="email"
-              class="modal-input"
-              placeholder=""
-              name="user-email"
-              required
-            />
-          </label>
-
-          <label
-            ><span class="input-name">Comment</span>
-            <input
-              type="text"
-              class="modal-input comment"
-              placeholder="Text input "
-              name="user-comment"
-            />
-          </label>
-
+        <form class="modal-form" name="order" autocomplete="on">
+          <div class="information-box">
+            <label class="form-label">
+                <span class="input-name">Name</span>
+                <div class="input-wrap">
+                  <input
+                    type="text"
+                    class="modal-input"
+                    placeholder=" "
+                    name="user-name"
+                  />
+                  <svg class="oreder-icon"><use href="./images/icons.svg#icon-person"></use></svg>
+                </div>
+              
+            </label>
+  
+            <label class="form-label">
+              <span class="input-name">Phone</span>
+              <div class="input-wrap">
+                <input
+                  type="tel"
+                  class="modal-input"
+                  placeholder=" "
+                  name="user-phone"
+                />
+                <svg class="oreder-icon"><use href="./images/icons.svg#icon-phone"></use></svg>
+              </div>
+            </label>
+  
+            <label class="form-label">
+              <span class="input-name">Email</span>
+              <div class="input-wrap">
+                <input
+                  type="email"
+                  class="modal-input"
+                  placeholder=" "
+                  name="user-email"
+                />
+                <svg class="oreder-icon"><use href="./images/icons.svg#icon-email"></use></svg>
+              </div>
+            </label>
+  
+            <label class="comments">
+              <span class="input-name">Comment</span>
+              <textarea class="comments-input" name="feedback" rows="7" placeholder="Text input"></textarea>
+            </label>
+          </div>
+              <div class="checkbox">
+                  <input class="check visually-hidden" type="checkbox" name="accept" value="accept" id="privacy" />
+                  <label class="checkbox-label" for="privacy">
+                    <span><svg class="checkbox-icon"><use href="./images/icons.svg#icon-input-modal"></use></svg></span> accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+              </div>
           <button type="submit" class="modal-button">Send</button>
         </form>
       </div>
